@@ -1,0 +1,18 @@
+map > :forward<CR>
+map < :back<CR>
+set gui=none
+autocmd LocationChange .* zoom 120
+set hintchars=hjklasdfgyuiopqwertnmzxcvb
+
+autocmd LocationChange .* :js modes.passAllKeys = /mail\.google\.com|www\.google\.com\/reader\/view/.test(buffer.URL)
+
+noremap <A->> :tabnext<CR>
+noremap <A-<> :tabprevious<CR>
+
+map s i<C-a>
+
+set status=bookmark,history,tabcount,position,location,input
+
+set complete=sSl
+
+"set defsearch=duck
